@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b6bdf032-d042-4360-b0d7-e34d0c71d8c3" name="Default Changelist" comment="" />
+    <list default="true" id="b6bdf032-d042-4360-b0d7-e34d0c71d8c3" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/lesson2/App2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -14,7 +18,11 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
   <component name="ProjectId" id="1WLw2gj1s5rGTzbJY9QgIRwsWGt" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -22,12 +30,26 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="project.structure.last.edited" value="SDKs" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="configurable.group.build.tools" />
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.App2">
+    <configuration name="App2" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="lesson2.App2" />
+      <module name="GBProject" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="lesson2.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="FirstApp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="lesson1.FirstApp" />
       <module name="GBProject" />
@@ -44,6 +66,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.App2" />
         <item itemvalue="Application.FirstApp" />
       </list>
     </recent_temporary>
@@ -82,34 +105,38 @@
       <screen x="0" y="23" width="1366" height="677" />
     </state>
     <state x="470" y="74" key="#com.intellij.ide.macro.MacrosDialog/0.23.1366.677@0.23.1366.677" timestamp="1578942980020" />
-    <state width="1343" height="170" key="GridCell.Tab.0.bottom" timestamp="1579024493132">
-      <screen x="0" y="23" width="1366" height="677" />
+    <state width="1324" height="186" key="GridCell.Tab.0.bottom" timestamp="1579458740499">
+      <screen x="0" y="23" width="1366" height="681" />
     </state>
     <state width="1343" height="170" key="GridCell.Tab.0.bottom/0.23.1366.677@0.23.1366.677" timestamp="1579024493132" />
     <state width="1343" height="170" key="GridCell.Tab.0.bottom/0.23.1366.679@0.23.1366.679" timestamp="1579019033307" />
-    <state width="1343" height="170" key="GridCell.Tab.0.center" timestamp="1579024493131">
-      <screen x="0" y="23" width="1366" height="677" />
+    <state width="1324" height="186" key="GridCell.Tab.0.bottom/0.23.1366.681@0.23.1366.681" timestamp="1579458740499" />
+    <state width="1324" height="186" key="GridCell.Tab.0.center" timestamp="1579458740498">
+      <screen x="0" y="23" width="1366" height="681" />
     </state>
     <state width="1343" height="170" key="GridCell.Tab.0.center/0.23.1366.677@0.23.1366.677" timestamp="1579024493131" />
     <state width="1343" height="170" key="GridCell.Tab.0.center/0.23.1366.679@0.23.1366.679" timestamp="1579019033305" />
-    <state width="1343" height="170" key="GridCell.Tab.0.left" timestamp="1579024493130">
-      <screen x="0" y="23" width="1366" height="677" />
+    <state width="1324" height="186" key="GridCell.Tab.0.center/0.23.1366.681@0.23.1366.681" timestamp="1579458740498" />
+    <state width="1324" height="186" key="GridCell.Tab.0.left" timestamp="1579458740498">
+      <screen x="0" y="23" width="1366" height="681" />
     </state>
     <state width="1343" height="170" key="GridCell.Tab.0.left/0.23.1366.677@0.23.1366.677" timestamp="1579024493130" />
     <state width="1343" height="170" key="GridCell.Tab.0.left/0.23.1366.679@0.23.1366.679" timestamp="1579019033304" />
-    <state width="1343" height="170" key="GridCell.Tab.0.right" timestamp="1579024493132">
-      <screen x="0" y="23" width="1366" height="677" />
+    <state width="1324" height="186" key="GridCell.Tab.0.left/0.23.1366.681@0.23.1366.681" timestamp="1579458740498" />
+    <state width="1324" height="186" key="GridCell.Tab.0.right" timestamp="1579458740499">
+      <screen x="0" y="23" width="1366" height="681" />
     </state>
     <state width="1343" height="170" key="GridCell.Tab.0.right/0.23.1366.677@0.23.1366.677" timestamp="1579024493132" />
     <state width="1343" height="170" key="GridCell.Tab.0.right/0.23.1366.679@0.23.1366.679" timestamp="1579019033306" />
+    <state width="1324" height="186" key="GridCell.Tab.0.right/0.23.1366.681@0.23.1366.681" timestamp="1579458740499" />
     <state x="171" y="23" key="SettingsEditor" timestamp="1578942270915">
       <screen x="0" y="23" width="1366" height="679" />
     </state>
     <state x="171" y="23" key="SettingsEditor/0.23.1366.679@0.23.1366.679" timestamp="1578942270915" />
-    <state x="376" y="194" key="com.intellij.ide.util.TipDialog" timestamp="1578942076113">
+    <state x="376" y="194" key="com.intellij.ide.util.TipDialog" timestamp="1579458567862">
       <screen x="0" y="23" width="1366" height="679" />
     </state>
-    <state x="376" y="194" key="com.intellij.ide.util.TipDialog/0.23.1366.679@0.23.1366.679" timestamp="1578942076113" />
+    <state x="376" y="194" key="com.intellij.ide.util.TipDialog/0.23.1366.679@0.23.1366.679" timestamp="1579458567862" />
     <state x="431" y="23" key="refactoring.ChangeSignatureDialog" timestamp="1578945098107">
       <screen x="0" y="23" width="1366" height="677" />
     </state>
