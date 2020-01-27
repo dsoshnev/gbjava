@@ -22,11 +22,11 @@ public class App4 {
         // Очень желательно не делать это просто набором условий для каждой из возможных ситуаций;
         //4. *** Доработать искусственный интеллект, чтобы он мог блокировать ходы игрока.
 
-        System.out.println("Игра крестики-нолики");
+        System.out.println("ИГРА: Поиграй с БОТом в крестики-нолики");
         initGameField();
         printGameField();
         playGame();
-        System.out.println("Конец игры");
+        System.out.println("ИГРА: Вот и все");
     }
 
     public static void playGame() {
@@ -34,7 +34,7 @@ public class App4 {
             humanMove(CELL_X);
             printGameField();
             if (isWin(CELL_X, COUNT_TO_WIN)) {
-                System.out.println("Вы победили!");
+                System.out.println("ИГРА: Вы победили!");
                 break;
             }
             if(isEnd()) {
@@ -44,7 +44,7 @@ public class App4 {
             botMove(CELL_O);
             printGameField();
             if (isWin(CELL_O, COUNT_TO_WIN)) {
-                System.out.println("Вы проиграли!");
+                System.out.println("ИГРА: Вы проиграли!");
                 break;
             }
 
@@ -57,29 +57,57 @@ public class App4 {
     }
 
     private static void botMove(char c) {
-        boolean repeat;
+        botBlockMove(c);
+        botRandomMove(c);
+    }
+
+    private static void botBlockMove(char c) {
+        int i;
+        i = checkColumns(CELL_X,COUNT_TO_WIN-1);
+        if (i >= 0) {
+            System.out.println("БОТ: Мне кажется, я начинаю проигрывать в столбце: " + (i+1));
+            //TODO
+        }
+
+        i = checkRows(CELL_X,COUNT_TO_WIN-1);
+        if (i >= 0) {
+            System.out.println("БОТ: Мне кажется, я начинаю проигрывать в строке: " +(i+1));
+            //TODO
+        }
+
+        i = checkMainDiagonal(CELL_X,COUNT_TO_WIN-1);
+        if (i >= 0) {
+            System.out.println("БОТ: Мне кажется, я начинаю проигрывать по главной диагонали");
+            //TODO
+        }
+
+        i = checkDiagonal(CELL_X,COUNT_TO_WIN-1);
+        if (i >= 0) {
+            System.out.println("БОТ: Мне кажется, я начинаю проигрывать диагонали");
+            //TODO
+        }
+    }
+
+
+    private static void botRandomMove(char c) {
         Random rand = new Random();
-        int x,y;
         do {
-            repeat = false;
-            y = rand.nextInt(GAME_SIZE);
-            x = rand.nextInt(GAME_SIZE);
+            int y = rand.nextInt(GAME_SIZE);
+            int x = rand.nextInt(GAME_SIZE);
             if (gameField[y][x] == CELL_EMPTY) {
                 gameField[y][x] = c;
-                System.out.println("ХОД БОТА (" + c + ") " + (y+1) + ":" + (x+1));
+                System.out.println("БОТ: Мой ход (" + c + ") " + (y+1) + ":" + (x+1));
+                break;
             } else {
                 //System.out.println("Клетка занята. БОТ попробует еще раз");;
-                repeat = true;
             }
-        } while(repeat);
+        } while(true);
     }
 
     private static void humanMove(char c) {
         Scanner sc = new Scanner(System.in);
-        boolean repeat;
+        System.out.println("ВАШ ХОД в формате Строка:Колонка (" + c + ")");
         do {
-            repeat = false;
-            System.out.println("ВАШ ХОД в формате Строка:Колонка (" + c + ")");
             String s = sc.nextLine();
             int i = s.indexOf(":");
             int x,y;
@@ -88,17 +116,15 @@ public class App4 {
                 x = Integer.parseInt(s.substring(i + 1))-1;
                 if (gameField[y][x] == CELL_EMPTY) {
                     gameField[y][x] = c;
+                    break;
                 } else {
-                    System.out.println("Клетка занята. Попробуй еще раз!");
-                    repeat = true;
+                    System.out.println("ИГРА: Клетка занята. Попробуй еще раз:");
                 }
-
             } catch(Exception ex) {
-                System.out.println("Попробуй еще раз!");
-                System.out.println(ex.getMessage());
-                repeat = true;
+                System.out.println("ИГРА: Ошибка. Попробуй еще раз:");
+                //System.out.println(ex.getMessage());
             }
-        } while (repeat);
+        } while (true);
 
     }
     private static boolean isEnd() {
@@ -132,52 +158,79 @@ public class App4 {
         // с использованием циклов.
         //3. * Попробовать переписать логику проверки победы, чтобы она работала для поля 5х5 и количества фишек 4.
         // Очень желательно не делать это просто набором условий для каждой из возможных ситуаций;
+
         //Проверка строк на победу
+        if (checkRows(c, countToWin)>=0) return true;
+        //Проверка столбцов на победу
+        if (checkColumns(c, countToWin)>=0) return true;
+        //Проверка главной диагонали на победу
+        if (checkMainDiagonal(c, countToWin)>=0) return true;
+        //Проверка диагонали на победу
+        if (checkDiagonal(c, countToWin)>=0) return true;
+
+        return false;
+    }
+
+    private static int checkDiagonal(char c, int countToWin) {
+        //Проверка диагонали на победу
+        int count = 0;
         for (int i = 0; i < GAME_SIZE; i++) {
-            int count = 0;
-            for (int j = 0; j < GAME_SIZE; j++) {
-                if(gameField[i][j] == c) {
-                    count++;
-                    if (count == countToWin) return true;
-                } else {
-                    count = 0;
-                }
+            if (gameField[i][GAME_SIZE-1-i] == c) {
+                count++;
+                if (count == countToWin) return i;
+            } else {
+                count = 0;
             }
         }
+        return -1;
+    }
+
+    private static int checkMainDiagonal(char c, int countToWin) {
+        //Проверка главной диагонали на победу
+        int count = 0;
+        for (int i = 0; i < GAME_SIZE; i++) {
+            if (gameField[i][i] == c) {
+                count++;
+                if (count == countToWin) return i;
+            } else {
+                count = 0;
+            }
+        }
+        return -1;
+    }
+
+    private static int checkColumns(char c, int countToWin) {
         //Проверка столбцов на победу
         for (int  j = 0; j < GAME_SIZE; j++) {
             int count = 0;
             for (int i = 0; i < GAME_SIZE; i++) {
                 if (gameField[i][j] == c) {
                     count++;
-                    if (count == countToWin) return true;
+                    if (count == countToWin) return j;
                 } else {
                     count = 0;
                 }
             }
         }
-        //Проверка диагонали на победу
-        int count = 0;
-        for (int i = 0; i < GAME_SIZE; i++) {
-            if (gameField[i][i] == c) {
-                count++;
-                if (count == countToWin) return true;
-            } else {
-                count = 0;
-            }
-        }
-
-        count = 0;
-        for (int i = 0; i < GAME_SIZE; i++) {
-            if (gameField[i][GAME_SIZE-1-i] == c) {
-                count++;
-                if (count == countToWin) return true;
-            } else {
-                count = 0;
-            }
-        }
-        return false;
+        return -1;
     }
+
+    private static int checkRows(char c, int countToWin) {
+        //Проверка строк на победу
+        for (int i = 0; i < GAME_SIZE; i++) {
+            int count = 0;
+            for (int j = 0; j < GAME_SIZE; j++) {
+                if(gameField[i][j] == c) {
+                    count++;
+                    if (count == countToWin) return i;
+                } else {
+                    count = 0;
+                }
+            }
+        }
+        return -1;
+    }
+
 
     public static void initGameField() {
         gameField = new char[GAME_SIZE][GAME_SIZE];
@@ -189,14 +242,16 @@ public class App4 {
     }
 
     public static void printGameField() {
+        //Шапка
         System.out.print(" ");
-        for (int i = 0; i < GAME_SIZE; i++) {
-            System.out.print(" " + (i+1));
+        for (int j = 0; j < GAME_SIZE; j++) {
+            System.out.print(" " + (j+1));
         }
         System.out.println();
-
+        //Строки
         for (int i = 0; i < GAME_SIZE; i++) {
             System.out.print((i+1));
+            //Столбцы
             for (int j = 0; j < GAME_SIZE; j++) {
                 System.out.print(" " + gameField[i][j]);
             }
