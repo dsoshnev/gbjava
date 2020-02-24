@@ -28,8 +28,10 @@ public class GameWindow extends JFrame {
                 public void actionPerformed(ActionEvent e) {
 
                     GameWindow window = (GameWindow) button.getTopLevelAncestor();
-                    game.set(game.CELL_X, button.getName());
-                    game.botMove(game.CELL_O);
+                    if(game.set(game.CELL_X, button.getName())) {
+                        button.setEnabled(false);
+                        game.botMove(game.CELL_O);
+                    }
 
                     for (JButton c : window.jbs) {
                         c.setText(String.valueOf(game.get(c.getName())));
