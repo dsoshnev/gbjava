@@ -15,23 +15,43 @@ public class App23 {
     // результатов проверки телефонного справочника.
 
     public static void main(String[] args) {
+        //1.1 Создать массив с набором слов (10-20 слов, должны встречаться повторяющиеся).
         String[] arr = {
                 "стол", "стул", "кружка", "тарелка", "чайник",
                 "стол", "ложка", "кружка", "вилка", "нож",
                 "стол"};
-
+        //1.2 Найти и вывести список уникальных слов, из которых состоит массив (дубликаты не считаем).
         ArrayList<String> alist = new ArrayList<>(Arrays.asList(arr));
-        Set<String> set = new HashSet<>(Arrays.asList(arr));
         System.out.println(alist);
+        Set<String> set = new HashSet<>(Arrays.asList(arr));
         System.out.println(set);
-        find(alist);
-        //TODO
+        //1.3 Посчитать, сколько раз встречается каждое слово.
+        findDuplicates(arr);
+
+        //2.Задание
+        Phonebook pb = new Phonebook();
+        pb.add("Петров", "111");
+        pb.add("Иванов", "222");
+        pb.add("Сидоров", "333");
+        pb.add("Иванов", "444");
+        System.out.println(pb);
+
+        System.out.println(pb.get("Петров"));
+        System.out.println(pb.get("Иванов"));
+        System.out.println(pb.get("Неизвестный"));
+
     }
 
 
-    public static void find(List<String> list) {
-        for (String s : list) {
-            System.out.println(s);
+    public static void findDuplicates(String[] arr) {
+        Set<String> set = new HashSet<>(Arrays.asList(arr));
+        int count;
+        for (String s : set) {
+            count = 0;
+            for (String s1 : arr) {
+                if(s1.equals(s)) count++;
+            }
+            System.out.printf("%s : %d\n", s, count);
         }
     }
 }
