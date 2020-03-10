@@ -30,7 +30,7 @@ public class MyMainWindow extends JFrame {
         jta.setEditable(false);
 
         //JButton
-        JButton jb = new JButton(" Отправить");
+        JButton jb = new JButton("Отправить");
         jb.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
