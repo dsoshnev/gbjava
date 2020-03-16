@@ -20,7 +20,7 @@ public class App26C {
             socket = new Socket(SERVER_ADDR,SERVER_PORT);
             dis = new DataInputStream(socket.getInputStream());
             dos = new DataOutputStream(socket.getOutputStream());
-            System.out.println("Клиент запущен: " + socket.toString());
+            System.out.println("Клиент запущен: " + socket);
 
             Thread th1 = new Thread(new Runnable() {
                 @Override
