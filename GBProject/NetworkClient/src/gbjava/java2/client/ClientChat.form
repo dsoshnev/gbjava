@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="ru.geekbrains.java2.client.view.ClientChat">
+<form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="gbjava.java2.client.ClientChat">
   <grid id="9b773" binding="mainPanel" default-binding="true" layout-manager="BorderLayout" hgap="0" vgap="0">
     <constraints>
       <xy x="101" y="84" width="640" height="480"/>
@@ -71,6 +71,7 @@
             <properties>
               <background color="-2499098"/>
               <model>
+                <item value="all"/>
                 <item value="username1"/>
                 <item value="username2"/>
                 <item value="username3"/>

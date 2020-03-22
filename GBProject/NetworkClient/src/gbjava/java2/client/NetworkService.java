@@ -34,7 +34,7 @@ public class NetworkService {
         new Thread(() -> {
             while (true) {
                 try {
-                    String message = in.readUTF();
+                    String message = readMessage();
                     if (message.startsWith("/auth")) {
                         String[] messageParts = message.split("\\s+", 2);
                         nickname = messageParts[1];
@@ -44,7 +44,7 @@ public class NetworkService {
                         messageHandler.accept(message);
                     }
                 } catch (IOException e) {
-                    System.out.println("Поток чтения был прерван!");
+                    System.out.println("Ошибка: Поток чтения был прерван!");
                     return;
                 }
             }
@@ -52,11 +52,22 @@ public class NetworkService {
     }
 
     public void sendAuthMessage(String login, String password) throws IOException {
-        out.writeUTF(String.format("/auth %s %s", login, password));
+        sendMessage(String.format("/auth %s %s", login, password));
+    }
+
+    public void sendPersonalMessage(String username, String message) throws IOException {
+        sendMessage(String.format("/w %s %s", username, message));
     }
 
     public void sendMessage(String message) throws IOException {
         out.writeUTF(message);
+        System.out.printf("Send: %s%n", message);
+    }
+
+    public String readMessage() throws IOException {
+        String message = in.readUTF();
+        System.out.printf("Read: %s%n", message);
+        return message;
     }
 
     public void setMessageHandler(Consumer<String> messageHandler) {

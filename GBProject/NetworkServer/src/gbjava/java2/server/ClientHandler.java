@@ -3,16 +3,16 @@ package gbjava.java2.server;
 import java.io.DataInputStream;
 import java.io.DataOutputStream;
 import java.io.IOException;
+import java.lang.reflect.Array;
 import java.net.Socket;
+import java.util.Arrays;
 
 public class ClientHandler {
 
     private final NetworkServer networkServer;
     private final Socket clientSocket;
-
     private DataInputStream in;
     private DataOutputStream out;
-
     private String nickname;
 
     public ClientHandler(NetworkServer networkServer, Socket socket) {
@@ -34,7 +34,7 @@ public class ClientHandler {
                     authentication();
                     readMessages();
                 } catch (IOException e) {
-                    System.out.println("Соединение с клиентом " + nickname + " было закрыто!");
+                    System.out.println("Соединение с клиентом " + nickname + " было закрыто");
                 } finally {
                     closeConnection();
                 }
@@ -55,25 +55,31 @@ public class ClientHandler {
     }
 
     private void readMessages() throws IOException {
+        System.out.println("Чтение сообщений...");
         while (true) {
-            String message = in.readUTF();
-            System.out.printf("От %s: %s%n", nickname, message);
+            // "/end"
+            String message = readMessage();
             if ("/end".equals(message)) {
                 return;
             }
-            networkServer.broadcastMessage(nickname + ": " + message, this);
+            // "/w username message"
+            if (message.startsWith("/w")) {
+                String[] messageParts = message.split("\\s+", 3);
+                networkServer.personalMessage(messageParts[1], nickname + ": " + messageParts[2], this);
+            } else {
+                networkServer.broadcastMessage(nickname + ": " + message, this);
+            }
         }
     }
 
     private void authentication() throws IOException {
+        System.out.println("Аутентфикация...");
         while (true) {
-            String message = in.readUTF();
+            String message = readMessage();
             // "/auth login password"
             if (message.startsWith("/auth")) {
                 String[] messageParts = message.split("\\s+", 3);
-                String login = messageParts[1];
-                String password = messageParts[2];
-                String username = networkServer.getAuthService().getUsernameByLoginAndPassword(login, password);
+                String username = networkServer.getAuthService().getUsernameByLoginAndPassword(messageParts[1], messageParts[2]);
                 if (username == null) {
                     sendMessage("Отсутствует учетная запись по данному логину и паролю!");
                 } else {
@@ -87,7 +93,18 @@ public class ClientHandler {
         }
     }
 
+    public String readMessage() throws IOException {
+        String message = in.readUTF();
+        System.out.printf("Получение: %s: %s%n", nickname, message);
+        return message;
+    }
+
     public void sendMessage(String message) throws IOException {
         out.writeUTF(message);
+        System.out.printf("Отправка: %s: %s%n", nickname, message);
+    }
+
+    public String getNickname() {
+        return nickname;
     }
 }

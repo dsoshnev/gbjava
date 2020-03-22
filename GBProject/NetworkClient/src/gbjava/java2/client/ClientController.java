@@ -24,6 +24,7 @@ public class ClientController {
     private void runAuthProcess() {
         networkService.setSuccessfulAuthEvent(nickname -> {
             setUserName(nickname);
+            clientChat.setTitle(nickname);
             openChat();
         });
         authDialog.setVisible(true);
@@ -57,7 +58,16 @@ public class ClientController {
         try {
             networkService.sendMessage(message);
         } catch (IOException e) {
-            JOptionPane.showMessageDialog(null, "Failed to send message!");
+            clientChat.showError("Failed to send message!");
+            e.printStackTrace();
+        }
+    }
+
+    public void sendPersonalMessage(String username, String message) {
+        try {
+            networkService.sendPersonalMessage(username, message);
+        } catch (IOException e) {
+            clientChat.showError("Failed to send message!");
             e.printStackTrace();
         }
     }

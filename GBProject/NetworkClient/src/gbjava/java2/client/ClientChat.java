@@ -16,7 +16,6 @@ public class ClientChat extends JFrame {
 
     public ClientChat(ClientController controller) {
         this.controller = controller;
-        setTitle(controller.getUsername());
         setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         setSize(640, 480);
         setLocationRelativeTo(null);
@@ -29,21 +28,23 @@ public class ClientChat extends JFrame {
         });
     }
 
-
     private void addListeners() {
-        sendButton.addActionListener(e -> ClientChat.this.sendMessage());
+        sendButton.addActionListener(e -> sendMessage());
         messageTextField.addActionListener(e -> sendMessage());
     }
 
     private void sendMessage() {
         String message = messageTextField.getText().trim();
-        if (message.isEmpty()) {
-            return;
+        if (!message.isEmpty()) {
+            appendOwnMessage(message);
+            String  username = usersList.getSelectedValue();
+            if(username == null || username.equals("all")) {
+                controller.sendMessage(message);
+            } else {
+                controller.sendPersonalMessage(username, message);
+            }
+            messageTextField.setText(null);
         }
-
-        appendOwnMessage(message);
-        controller.sendMessage(message);
-        messageTextField.setText(null);
     }
 
     public void appendMessage(String message) {
@@ -53,10 +54,11 @@ public class ClientChat extends JFrame {
         });
     }
 
-
     private void appendOwnMessage(String message) {
         appendMessage("Я: " + message);
     }
 
-
+    public void showError(String message) {
+        JOptionPane.showMessageDialog(this, message);
+    }
 }

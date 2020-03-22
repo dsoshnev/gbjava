@@ -24,11 +24,11 @@ public class NetworkServer {
             while (true) {
                 System.out.println("Ожидание клиентского подключения...");
                 Socket clientSocket = serverSocket.accept();
-                System.out.println("Клиент подлючился");
+                System.out.println("Клиент подлючился " + clientSocket);
                 createClientHandler(clientSocket);
             }
         } catch (IOException e) {
-            System.out.println("Ошибка при работе сервера");
+            System.err.println("Ошибка при работе сервера");
             e.printStackTrace();
         } finally {
             authService.stop();
@@ -44,9 +44,18 @@ public class NetworkServer {
         return authService;
     }
 
+
     public synchronized void broadcastMessage(String message, ClientHandler owner) throws IOException {
         for (ClientHandler client : clients) {
             if (client != owner) {
+                client.sendMessage(message);
+            }
+        }
+    }
+
+    public synchronized void personalMessage(String name, String message, ClientHandler owner) throws IOException {
+        for (ClientHandler client : clients) {
+            if (client.getNickname().equals(name)) {
                 client.sendMessage(message);
             }
         }
