@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="fb86b8d2-87c9-4c9a-9a90-0c156a67f5c3" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../GBProject/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../GBProject/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GBProject/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../GBProject/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GBProject/GBProject.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../GBProject/GBProject.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GBProject/out/production/GBProject/lesson1/FirstApp.class" beforeDir="false" afterPath="$PROJECT_DIR$/../GBProject/out/production/GBProject/lesson1/FirstApp.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GBProject/out/production/GBProject/lesson2/App2.class" beforeDir="false" afterPath="$PROJECT_DIR$/../GBProject/out/production/GBProject/lesson2/App2.class" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$/.." value="lesson28" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="IgnoredFileRootStore">
+    <option name="generatedRoots">
+      <set>
+        <option value="$PROJECT_DIR$/.idea" />
+      </set>
+    </option>
+  </component>
+  <component name="ProjectId" id="1ZdCNEANf0Y98soG30Edvpez6B6" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.javacompiler" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="fb86b8d2-87c9-4c9a-9a90-0c156a67f5c3" name="Default Changelist" comment="" />
+      <created>1585159541406</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1585159541406</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="318" y="23" key="CommitChangelistDialog2" timestamp="1585159746256">
+      <screen x="0" y="23" width="1366" height="685" />
+    </state>
+    <state x="318" y="23" key="CommitChangelistDialog2/0.23.1366.685@0.23.1366.685" timestamp="1585159746256" />
+  </component>
+</project>
