@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="fb86b8d2-87c9-4c9a-9a90-0c156a67f5c3" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/lesson31/App31.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/lesson31/Apple.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/lesson31/Box.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/lesson31/Fruit.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/lesson31/Orange.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GBProject/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../GBProject/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GBProject/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../GBProject/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GBProject/GBProject.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../GBProject/GBProject.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GBProject/out/production/GBProject/lesson1/FirstApp.class" beforeDir="false" afterPath="$PROJECT_DIR$/../GBProject/out/production/GBProject/lesson1/FirstApp.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GBProject/out/production/GBProject/lesson2/App2.class" beforeDir="false" afterPath="$PROJECT_DIR$/../GBProject/out/production/GBProject/lesson2/App2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App31.java" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$/.." value="lesson28" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="IgnoredFileRootStore">
+    <option name="generatedRoots">
+      <set>
+        <option value="$PROJECT_DIR$/.idea" />
+      </set>
+    </option>
+  </component>
+  <component name="ProjectId" id="1ZdCNEANf0Y98soG30Edvpez6B6" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.javacompiler" />
+  </component>
+  <component name="RunManager">
+    <configuration name="App31" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="lesson31.App31" />
+      <module name="GBProject3" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.App31" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="fb86b8d2-87c9-4c9a-9a90-0c156a67f5c3" name="Default Changelist" comment="" />
+      <created>1585159541406</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1585159541406</updated>
+    </task>
+    <task id="LOCAL-00001" summary="Первый коммит по Java3">
+      <created>1585159821986</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1585159821987</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Первый коммит по Java3">
+      <created>1585159975076</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1585159975076</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Первый коммит по Java3">
+      <created>1585160032169</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1585160032169</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
+    <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Первый коммит по Java3" />
+    <option name="LAST_COMMIT_MESSAGE" value="Первый коммит по Java3" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="496" y="86" key="#com.intellij.ide.util.MemberChooser" timestamp="1585221710477">
+      <screen x="0" y="23" width="1366" height="691" />
+    </state>
+    <state x="496" y="86" key="#com.intellij.ide.util.MemberChooser/0.23.1366.683@0.23.1366.683" timestamp="1585163046043" />
+    <state x="496" y="86" key="#com.intellij.ide.util.MemberChooser/0.23.1366.685@0.23.1366.685" timestamp="1585216559773" />
+    <state x="496" y="86" key="#com.intellij.ide.util.MemberChooser/0.23.1366.689@0.23.1366.689" timestamp="1585219950473" />
+    <state x="496" y="86" key="#com.intellij.ide.util.MemberChooser/0.23.1366.691@0.23.1366.691" timestamp="1585221710477" />
+    <state x="318" y="23" key="CommitChangelistDialog2" timestamp="1585160031881">
+      <screen x="0" y="23" width="1366" height="683" />
+    </state>
+    <state x="318" y="23" key="CommitChangelistDialog2/0.23.1366.683@0.23.1366.683" timestamp="1585160031881" />
+    <state x="318" y="23" key="CommitChangelistDialog2/0.23.1366.685@0.23.1366.685" timestamp="1585159821681" />
+    <state width="1324" height="219" key="GridCell.Tab.0.bottom" timestamp="1585223476864">
+      <screen x="0" y="23" width="1366" height="691" />
+    </state>
+    <state width="1324" height="166" key="GridCell.Tab.0.bottom/0.23.1366.683@0.23.1366.683" timestamp="1585162857078" />
+    <state width="1324" height="166" key="GridCell.Tab.0.bottom/0.23.1366.685@0.23.1366.685" timestamp="1585161177144" />
+    <state width="1324" height="151" key="GridCell.Tab.0.bottom/0.23.1366.689@0.23.1366.689" timestamp="1585220085515" />
+    <state width="1324" height="219" key="GridCell.Tab.0.bottom/0.23.1366.691@0.23.1366.691" timestamp="1585223476864" />
+    <state width="1324" height="219" key="GridCell.Tab.0.center" timestamp="1585223476863">
+      <screen x="0" y="23" width="1366" height="691" />
+    </state>
+    <state width="1324" height="166" key="GridCell.Tab.0.center/0.23.1366.683@0.23.1366.683" timestamp="1585162857076" />
+    <state width="1324" height="166" key="GridCell.Tab.0.center/0.23.1366.685@0.23.1366.685" timestamp="1585161177143" />
+    <state width="1324" height="151" key="GridCell.Tab.0.center/0.23.1366.689@0.23.1366.689" timestamp="1585220085514" />
+    <state width="1324" height="219" key="GridCell.Tab.0.center/0.23.1366.691@0.23.1366.691" timestamp="1585223476863" />
+    <state width="1324" height="219" key="GridCell.Tab.0.left" timestamp="1585223476863">
+      <screen x="0" y="23" width="1366" height="691" />
+    </state>
+    <state width="1324" height="166" key="GridCell.Tab.0.left/0.23.1366.683@0.23.1366.683" timestamp="1585162857075" />
+    <state width="1324" height="166" key="GridCell.Tab.0.left/0.23.1366.685@0.23.1366.685" timestamp="1585161177142" />
+    <state width="1324" height="151" key="GridCell.Tab.0.left/0.23.1366.689@0.23.1366.689" timestamp="1585220085513" />
+    <state width="1324" height="219" key="GridCell.Tab.0.left/0.23.1366.691@0.23.1366.691" timestamp="1585223476863" />
+    <state width="1324" height="219" key="GridCell.Tab.0.right" timestamp="1585223476864">
+      <screen x="0" y="23" width="1366" height="691" />
+    </state>
+    <state width="1324" height="166" key="GridCell.Tab.0.right/0.23.1366.683@0.23.1366.683" timestamp="1585162857077" />
+    <state width="1324" height="166" key="GridCell.Tab.0.right/0.23.1366.685@0.23.1366.685" timestamp="1585161177144" />
+    <state width="1324" height="151" key="GridCell.Tab.0.right/0.23.1366.689@0.23.1366.689" timestamp="1585220085515" />
+    <state width="1324" height="219" key="GridCell.Tab.0.right/0.23.1366.691@0.23.1366.691" timestamp="1585223476864" />
+    <state width="1324" height="207" key="GridCell.Tab.1.bottom" timestamp="1585222809274">
+      <screen x="0" y="23" width="1366" height="691" />
+    </state>
+    <state width="1324" height="207" key="GridCell.Tab.1.bottom/0.23.1366.691@0.23.1366.691" timestamp="1585222809274" />
+    <state width="1324" height="207" key="GridCell.Tab.1.center" timestamp="1585222809273">
+      <screen x="0" y="23" width="1366" height="691" />
+    </state>
+    <state width="1324" height="207" key="GridCell.Tab.1.center/0.23.1366.691@0.23.1366.691" timestamp="1585222809273" />
+    <state width="1324" height="207" key="GridCell.Tab.1.left" timestamp="1585222809272">
+      <screen x="0" y="23" width="1366" height="691" />
+    </state>
+    <state width="1324" height="207" key="GridCell.Tab.1.left/0.23.1366.691@0.23.1366.691" timestamp="1585222809272" />
+    <state width="1324" height="207" key="GridCell.Tab.1.right" timestamp="1585222809273">
+      <screen x="0" y="23" width="1366" height="691" />
+    </state>
+    <state width="1324" height="207" key="GridCell.Tab.1.right/0.23.1366.691@0.23.1366.691" timestamp="1585222809273" />
+    <state x="283" y="92" key="Vcs.Push.Dialog.v2" timestamp="1585160035266">
+      <screen x="0" y="23" width="1366" height="683" />
+    </state>
+    <state x="283" y="92" key="Vcs.Push.Dialog.v2/0.23.1366.683@0.23.1366.683" timestamp="1585160035266" />
+  </component>
+</project>
